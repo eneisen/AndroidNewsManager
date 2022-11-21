@@ -11,6 +11,7 @@
         android:layout_width="0dp"
         android:layout_height="48dp"
 
+        android:background="#4FAA67"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appbar"
@@ -69,6 +70,7 @@
         android:id="@+id/articleList"
         android:layout_width="411dp"
         android:layout_height="0dp"
+        android:background="#2D2F31"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/appbar"
         app:layout_constraintTop_toBottomOf="@+id/filters" />
