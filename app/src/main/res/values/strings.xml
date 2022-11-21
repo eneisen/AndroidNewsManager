@@ -11,7 +11,7 @@
     <string name="category_text">Category</string>
     <string name="logout">Logout</string>
     <string name="login">Log in</string>
-    <string name="user">You are not logged</string>
+    <string name="user">You are not logged in</string>
     <string name="usernameHint">Username</string>
     <string name="passwordHint">Password</string>
     <string name="usernameHeader">Username:</string>
