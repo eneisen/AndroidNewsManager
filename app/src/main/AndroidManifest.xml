@@ -7,7 +7,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/newspaper"
+        android:icon="@drawable/efm_news_logo_klein"
+        android:banner="@drawable/efm_logo_full_white"
+        android:logo="@drawable/efm_logo_full"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
