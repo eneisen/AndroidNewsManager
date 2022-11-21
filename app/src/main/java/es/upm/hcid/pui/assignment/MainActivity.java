@@ -42,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
 
         setupArticleData();
 
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.drawable.efm_logo_full_white);
+
         TabLayout tabLayout = findViewById(R.id.filters);
         for (String tab : tabs) {
             tabLayout.addTab(tabLayout.newTab().setText(tab));
