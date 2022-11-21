@@ -30,7 +30,7 @@
         android:onClick="login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/articleList"
-        app:srcCompat="@android:drawable/ic_menu_set_as" />
+        app:srcCompat="@drawable/login_icon" />
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
