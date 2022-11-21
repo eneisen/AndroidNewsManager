@@ -11,12 +11,15 @@
         android:layout_width="0dp"
         android:layout_height="48dp"
 
-        android:background="#4FAA67"
+        android:background="#DE5833"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appbar"
         app:layout_scrollFlags="scroll|enterAlways"
-        app:tabMode="scrollable">
+        app:tabIconTint="@color/white"
+        app:tabIndicatorColor="#FDFDFD"
+        app:tabMode="scrollable"
+        app:tabTextColor="#FFFFFF">
 
     </com.google.android.material.tabs.TabLayout>
 
@@ -36,6 +39,7 @@
         android:id="@+id/appbar"
         android:layout_width="0dp"
         android:layout_height="40dp"
+        android:background="#39ab67"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -48,7 +52,7 @@
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:text="@string/user"
-            android:textColor="#FDFDFD"
+            android:textColor="#2D2F31"
             android:textSize="20sp" />
 
 
