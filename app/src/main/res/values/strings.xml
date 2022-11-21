@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">EFMNews</string>
+    <string name="app_name">EFM-News</string>
     <string name="tabEconomy">Economy</string>
     <string name="tabSports">Sports</string>
     <string name="tabInternational">International</string>
