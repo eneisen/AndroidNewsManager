@@ -156,11 +156,11 @@ public class MainActivity extends AppCompatActivity {
         if (loggedIn) {
             FloatingActionButton loginButton = findViewById(R.id.btn_login_Out);
             TextView loginStatus = findViewById(R.id.login_text);
-            loginStatus.setText("You are logged");
+            loginStatus.setText("You are logged in");
         } else {
             FloatingActionButton loginButton = findViewById(R.id.btn_login_Out);
             TextView loginStatus = findViewById(R.id.login_text);
-            loginStatus.setText("You are not logged");
+            loginStatus.setText("You are not logged in");
         }
 
         getArticles();
