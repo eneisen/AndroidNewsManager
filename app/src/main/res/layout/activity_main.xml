@@ -8,8 +8,8 @@
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/filters"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_width="414dp"
+        android:layout_height="45dp"
 
         android:background="#DE5833"
         app:layout_constraintEnd_toEndOf="parent"
