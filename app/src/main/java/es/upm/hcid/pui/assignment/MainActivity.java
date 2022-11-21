@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     public static Boolean loggedIn = false;
     private String username = "";
 
-    List<String> tabs = Arrays.asList("All", "National", "International", "Sport", "Economy");
+    List<String> tabs = Arrays.asList("All", "National", "International", "Sports", "Economy");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
