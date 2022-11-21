@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="es.upm.hcid.pui.assignment.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
+
+        <TextView
+            android:id="@+id/username_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/usernameHeader" />
+
+        <EditText
+            android:id="@+id/user_textEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:autofillHints="username"
+            android:hint="@string/usernameHint"
+            android:inputType="text"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/password_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/passwordHeader" />
+
+        <EditText
+            android:id="@+id/password_textEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="password"
+            android:hint="@string/passwordHint"
+            android:inputType="textPassword"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_logIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:onClick = "loginAttempt"
+            />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
