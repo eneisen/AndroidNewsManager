@@ -33,7 +33,7 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView">
 
             <TextView
-                android:id="@+id/category_text"
+                android:id="@+id/categoryText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView"
@@ -41,7 +41,7 @@
                 android:textColorHint="#FFFFFF" />
 
             <TextView
-                android:id="@+id/title_text"
+                android:id="@+id/titleText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView"
@@ -91,7 +91,7 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
 
             <TextView
-                android:id="@+id/abstract_text"
+                android:id="@+id/abstractText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView"
@@ -100,7 +100,7 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/body_text"
+                android:id="@+id/bodyText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView"
@@ -112,7 +112,7 @@
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:id="@+id/userId_text"
+                android:id="@+id/userIdText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView"

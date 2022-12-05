@@ -14,7 +14,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/username_text"
+            android:id="@+id/userText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/usernameHeader"
@@ -22,7 +22,7 @@
             android:textColorHint="#FFFFFF" />
 
         <EditText
-            android:id="@+id/user_textEdit"
+            android:id="@+id/userTextEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
@@ -35,7 +35,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/password_text"
+            android:id="@+id/passwordText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/passwordHeader"
@@ -43,7 +43,7 @@
             android:textColorHint="#FFFFFF" />
 
         <EditText
-            android:id="@+id/password_textEdit"
+            android:id="@+id/passwordTextEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints="password"
@@ -54,7 +54,7 @@
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/btn_logIn"
+            android:id="@+id/LoginBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="loginAttempt"

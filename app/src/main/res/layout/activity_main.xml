@@ -7,14 +7,14 @@
     android:layout_height="match_parent">
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/filters"
+        android:id="@+id/filterBar"
         android:layout_width="414dp"
         android:layout_height="45dp"
 
         android:background="#DE5833"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appbar"
+        app:layout_constraintTop_toBottomOf="@+id/loginBar"
         app:layout_scrollFlags="scroll|enterAlways"
         app:tabIconTint="@color/white"
         app:tabIndicatorColor="#FDFDFD"
@@ -24,7 +24,7 @@
     </com.google.android.material.tabs.TabLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btn_login_Out"
+        android:id="@+id/loginBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
@@ -36,7 +36,7 @@
         app:srcCompat="@drawable/login_icon" />
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar"
+        android:id="@+id/loginBar"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:background="#39ab67"
@@ -78,7 +78,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/appbar"
+        app:layout_constraintStart_toStartOf="@+id/loginBar"
         app:layout_constraintTop_toBottomOf="@+id/marqueeText" />
 
     <TextView
@@ -95,7 +95,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/filters" />
+        app:layout_constraintTop_toBottomOf="@+id/filterBar" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

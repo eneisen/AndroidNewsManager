@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
         this.findViewById(R.id.marqueeText).setSelected(true);
 
-        TabLayout tabLayout = findViewById(R.id.filters);
+        TabLayout tabLayout = findViewById(R.id.filterBar);
         for (String tab : tabs) {
             tabLayout.addTab(tabLayout.newTab().setText(tab));
         }
@@ -159,14 +159,14 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     private void updateLabelsRegardingLoginStatus() {
         if (loggedIn) {
-            FloatingActionButton loginButton = findViewById(R.id.btn_login_Out);
+            FloatingActionButton loginButton = findViewById(R.id.loginBtn);
             TextView loginStatus = findViewById(R.id.login_text);
             SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
             username = prefs.getString(LoginActivity.KEY_USERNAME, "");
             loginStatus.setText("Logged in as  " + username);
             loginButton.setImageResource(R.drawable.logout_icon);
         } else {
-            FloatingActionButton loginButton = findViewById(R.id.btn_login_Out);
+            FloatingActionButton loginButton = findViewById(R.id.loginBtn);
             TextView loginStatus = findViewById(R.id.login_text);
             loginStatus.setText("No User logged in");
             loginButton.setImageResource(R.drawable.login_icon);

@@ -53,13 +53,13 @@ public class ArticleActivity extends AppCompatActivity {
 
         SelectedArticle = article;
 
-        TextView article_title = findViewById(R.id.title_text);
+        TextView article_title = findViewById(R.id.titleText);
        // TextView article_subtitle = findViewById(R.id.subtitle_textView);
         ImageView article_image = findViewById(R.id.imageView);
-        TextView article_category = findViewById(R.id.category_text);
-        TextView article_abstract = findViewById(R.id.abstract_text);
-        TextView article_body = findViewById(R.id.body_text);
-        TextView userId = findViewById(R.id.userId_text);
+        TextView article_category = findViewById(R.id.categoryText);
+        TextView article_abstract = findViewById(R.id.abstractText);
+        TextView article_body = findViewById(R.id.bodyText);
+        TextView userId = findViewById(R.id.userIdText);
        // TextView modification_date = findViewById(R.id.modification_textView);
 
         article_title.setText(article.getTitleText());
