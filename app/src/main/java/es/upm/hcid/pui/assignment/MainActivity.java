@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.drawable.efm_logo_full_white);
 
+        this.findViewById(R.id.marqueeText).setSelected(true);
+
         TabLayout tabLayout = findViewById(R.id.filters);
         for (String tab : tabs) {
             tabLayout.addTab(tabLayout.newTab().setText(tab));
@@ -159,11 +161,15 @@ public class MainActivity extends AppCompatActivity {
         if (loggedIn) {
             FloatingActionButton loginButton = findViewById(R.id.btn_login_Out);
             TextView loginStatus = findViewById(R.id.login_text);
-            loginStatus.setText("You are logged in");
+            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+            username = prefs.getString(LoginActivity.KEY_USERNAME, "");
+            loginStatus.setText("Logged in as  " + username);
+            loginButton.setImageResource(R.drawable.logout_icon);
         } else {
             FloatingActionButton loginButton = findViewById(R.id.btn_login_Out);
             TextView loginStatus = findViewById(R.id.login_text);
-            loginStatus.setText("You are not logged in");
+            loginStatus.setText("No User logged in");
+            loginButton.setImageResource(R.drawable.login_icon);
         }
 
         getArticles();
