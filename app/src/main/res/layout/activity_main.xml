@@ -72,25 +72,26 @@
 
     <ListView
         android:id="@+id/articleList"
-        android:layout_width="412dp"
-        android:layout_height="625dp"
+        android:layout_width="409dp"
+        android:layout_height="636dp"
         android:background="#2D2F31"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/appbar" />
+        app:layout_constraintStart_toStartOf="@+id/appbar"
+        app:layout_constraintTop_toBottomOf="@+id/marqueeText" />
 
     <TextView
         android:id="@+id/marqueeText"
-        android:layout_width="409dp"
-        android:layout_height="21dp"
+        android:layout_width="415dp"
+        android:layout_height="19dp"
+        android:background="@color/dark"
         android:ellipsize="marquee"
         android:marqueeRepeatLimit="marquee_forever"
         android:scrollHorizontally="true"
         android:singleLine="true"
         android:text="--- Breaking News provided by EFM-News --- Breaking News provided by EFM-News --- Breaking News provided by EFM-News "
         android:textColor="@color/white"
-        android:background="@color/dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
