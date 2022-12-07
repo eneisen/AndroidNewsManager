@@ -4,6 +4,7 @@ package es.upm.hcid.pui.assignment;
 import org.json.simple.JSONObject;
 
 import java.util.Hashtable;
+import java.util.Date;
 
 import es.upm.hcid.pui.assignment.exceptions.ServerCommunicationError;
 
@@ -20,7 +21,7 @@ public class Article extends ModelEntity{
 	private Image mainImage;
 	private String imageDescription;
 	private String thumbnail;
-	//private Date publicationDate;
+	private String publicationDate;
 
 	private String parseStringFromJson(JSONObject jsonArticle, String key, String def){
 		Object in = jsonArticle.getOrDefault(key,def);
@@ -43,7 +44,9 @@ public class Article extends ModelEntity{
 			thumbnail = parseStringFromJson(jsonArticle,"thumbnail_image","").replaceAll("\\\\","");
 			
 			String imageData = parseStringFromJson(jsonArticle,"image_data","").replaceAll("\\\\","");
-		
+
+			publicationDate = parseStringFromJson(jsonArticle,"update_date","").replaceAll("\\\\","");
+
 			if (imageData!=null && !imageData.isEmpty())
 				mainImage = new Image(mm, 1, imageDescription, id, imageData);
 		}catch(Exception e){
@@ -78,12 +81,12 @@ public class Article extends ModelEntity{
 		return titleText;
 	}
 
-	/*public boolean getModificationDate(){
+	public String getModificationDate(){
 		return publicationDate;
 	}
-	public void setModificationDate(Date modificationDate) {
+	/*public void setModificationDate(Date modificationDate) {
 		this.publicationDate=modificationDate;
-	}*/
+	}
 
 	/*public String getSubtitleText() {
 		return subtitleText;

@@ -60,7 +60,7 @@ public class ArticleActivity extends AppCompatActivity {
         TextView article_abstract = findViewById(R.id.abstractText);
         TextView article_body = findViewById(R.id.bodyText);
         TextView userId = findViewById(R.id.userIdText);
-       // TextView modification_date = findViewById(R.id.modification_textView);
+        TextView modification_date = findViewById(R.id.modification_textView);
 
         article_title.setText(article.getTitleText());
         article_abstract.setText(Html.fromHtml(article.getAbstractText(), Html.FROM_HTML_MODE_COMPACT));
@@ -68,11 +68,11 @@ public class ArticleActivity extends AppCompatActivity {
         article_category.setText(article.getCategory());
 
 
-        /*String modificationDate = "Modification date ";
-        if (article.getModificationDate()) {
+        String modificationDate = "Modification date: ";
+        if (article.getModificationDate() != null) {
             modificationDate += article.getModificationDate();
         }
-        modification_date.setText(modificationDate);*/
+        modification_date.setText(modificationDate);
 
         String userIdString = "User ID: ";
         if (article.getIdUser() > 0) {
