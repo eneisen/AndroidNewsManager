@@ -85,7 +85,7 @@ public class ArticleAdapter extends BaseAdapter implements Filterable {
         } catch (ServerCommunicationError serverCommunicationError) {
         }
         if (bitmap == null) {
-            articleImageView.setImageResource(R.drawable.newspaper);
+            articleImageView.setImageResource(R.drawable.news);
         } else {
             articleImageView.setImageBitmap(bitmap);
         }
@@ -111,7 +111,6 @@ public class ArticleAdapter extends BaseAdapter implements Filterable {
             return null;
         }
     }
-
 
     @Override
     public Filter getFilter() {

@@ -54,25 +54,17 @@ public class ArticleActivity extends AppCompatActivity {
         SelectedArticle = article;
 
         TextView article_title = findViewById(R.id.titleText);
-       // TextView article_subtitle = findViewById(R.id.subtitle_textView);
         ImageView article_image = findViewById(R.id.imageView);
         TextView article_category = findViewById(R.id.categoryText);
         TextView article_abstract = findViewById(R.id.abstractText);
         TextView article_body = findViewById(R.id.bodyText);
         TextView userId = findViewById(R.id.userIdText);
-        TextView modification_date = findViewById(R.id.modification_textView);
+        TextView edit_date = findViewById(R.id.modification_textView);
 
         article_title.setText(article.getTitleText());
         article_abstract.setText(Html.fromHtml(article.getAbstractText(), Html.FROM_HTML_MODE_COMPACT));
         article_body.setText(Html.fromHtml(article.getBodyText(), Html.FROM_HTML_MODE_COMPACT));
         article_category.setText(article.getCategory());
-
-
-        String modificationDate = "Modification date: ";
-        if (article.getModificationDate() != null) {
-            modificationDate += article.getModificationDate();
-        }
-        modification_date.setText(modificationDate);
 
         String userIdString = "User ID: ";
         if (article.getIdUser() > 0) {
@@ -80,10 +72,16 @@ public class ArticleActivity extends AppCompatActivity {
         }
         userId.setText(userIdString);
 
+        String editDate = "Edit date: ";
+        if (article.getEditDate() != null) {
+            editDate += article.getEditDate();
+        }
+        edit_date.setText(editDate);
+
         if (article.getImage() != null && article.getImage().getImage() != null) {
             article_image.setImageBitmap(Utils.base64StringToImg(article.getImage().getImage()));
         } else {
-            article_image.setImageResource(R.drawable.newspaper);
+            article_image.setImageResource(R.drawable.news);
         }
 
         if (MainActivity.loggedIn) {
@@ -124,10 +122,15 @@ public class ArticleActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        onBackPressed();
-        return super.onSupportNavigateUp();
+    public void deleteArticle(View view) {
+        new Thread(() -> {
+            try {
+                MainActivity.modelManager.delete(SelectedArticle);
+                runOnUiThread(this::finish);
+            } catch (ServerCommunicationError serverCommunicationError) {
+                serverCommunicationError.printStackTrace();
+            }
+        }).start();
     }
 
     @Override
@@ -158,14 +161,10 @@ public class ArticleActivity extends AppCompatActivity {
         }
     }
 
-    public void deleteArticle(View view) {
-        new Thread(() -> {
-            try {
-                MainActivity.modelManager.delete(SelectedArticle);
-                runOnUiThread(this::finish);
-            } catch (ServerCommunicationError serverCommunicationError) {
-                serverCommunicationError.printStackTrace();
-            }
-        }).start();
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
     }
+
 }
