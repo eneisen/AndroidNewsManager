@@ -2,9 +2,7 @@ package es.upm.hcid.pui.assignment;
 
 
 import org.json.simple.JSONObject;
-
 import java.util.Hashtable;
-import java.util.Date;
 
 import es.upm.hcid.pui.assignment.exceptions.ServerCommunicationError;
 
@@ -21,7 +19,8 @@ public class Article extends ModelEntity{
 	private Image mainImage;
 	private String imageDescription;
 	private String thumbnail;
-	private String publicationDate;
+	private String editDate;
+
 
 	private String parseStringFromJson(JSONObject jsonArticle, String key, String def){
 		Object in = jsonArticle.getOrDefault(key,def);
@@ -45,7 +44,7 @@ public class Article extends ModelEntity{
 			
 			String imageData = parseStringFromJson(jsonArticle,"image_data","").replaceAll("\\\\","");
 
-			publicationDate = parseStringFromJson(jsonArticle,"update_date","").replaceAll("\\\\","");
+			editDate = parseStringFromJson(jsonArticle,"update_date","").replaceAll("\\\\","");
 
 			if (imageData!=null && !imageData.isEmpty())
 				mainImage = new Image(mm, 1, imageDescription, id, imageData);
@@ -81,19 +80,6 @@ public class Article extends ModelEntity{
 		return titleText;
 	}
 
-	public String getModificationDate(){
-		return publicationDate;
-	}
-	/*public void setModificationDate(Date modificationDate) {
-		this.publicationDate=modificationDate;
-	}
-
-	/*public String getSubtitleText() {
-		return subtitleText;
-	}*/
-	/*public void setSubtitleText(String subtitleText) {
-		this.subtitleText = subtitleText;
-	}*/
 	public String getCategory() {
 		return category;
 	}
@@ -142,13 +128,16 @@ public class Article extends ModelEntity{
 		mainImage= img;
 		return img;
 	}
+
+	public String getEditDate(){
+		return editDate;
+	}
 	
 	@Override
 	public String toString() {
 		return "Article [id=" + getId()
 				//+ "isPublic=" + isPublic + ", isDeleted=" + isDeleted 
 				+", titleText=" + titleText
-				//+",subtitleText=" + subtitleText
 				+", abstractText=" + abstractText 
 				+  ", bodyText="	+ bodyText + ", footerText=" + footerText 
 				/*+ ", publicationDate=" + Utils.dateToString(publicationDate)*/
